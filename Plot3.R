@@ -1,6 +1,10 @@
 library(dplyr)
 library(lubridate)
 
+#
+# Read and clean the data. Date and Time are read as characters rest of columns as numeric
+# Convrt to tibble and date/time to lubridate 
+# filter only 1st feb and 2nd feb of 2007; kill all na rows
 
 y<- read.table( file = "household_power_consumption.txt",header = TRUE, sep = ";",
                 colClasses = c(rep("character",2), rep("numeric", 7)),
